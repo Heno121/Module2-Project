@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+    <h1>leave comment</h1>
+        <form action="">
+            <label for="name">Name</label>
+
+            <input required type="text" id="name" name="name"> <br> <br>
+            
+            <label for="email">Email</label>
+
+            <input required type="email" id="email" name="email"> <br><br>
+
+            <label for="message">Message</label>
+
+            <textarea name="message" id="message" placeholder="Coment about the Game"></textarea><br><br>
+
+            <input type="submit" value="submit">
+
+
+        </form>
+
+        <div id="feedback-message"></div>
+
+    <script src="contact.js">
+
+        function handleFormSubmit(event) {
+
+            // Stop the page from reloading automatically
+
+            event.preventDefault();
+
+        const form = document.getElementById('contactForm');
+
+        const feedbackDiv = document.getElementById('feedback-message');
+
+        const userName = document.getElementById('name').value;
+
+        const userEmail = document.getElementById('email').value;
+
+        const userMessage = document.getElementById('message').value;
+        
+            form.reset();
+        }
+        form.addEventListener('submit', handleFormSubmit);
+
+    </script>
+
+</body>
+<br><br>
+<footer style="align-items: center;">
+
+    <a href="Howto.html">www.Howto play.com</a>
+
+</footer>
+
+</html>
